@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FDF8F3">
+<title>Tasty Burguer | Relatório de Tráfego Pago — Setembro 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#D62828;--red-dark:#9E1B1B;--red-soft:#FDECEC;--red-pale:#FFF6F4;
+  --amber:#F2A33C;--amber-dark:#C97F1E;--amber-soft:#FEF3E2;
+  --brown:#7A4A2B;--brown-soft:#F6EDE5;
+  --ink:#1C1512;--muted:#7A6D66;--line:#EDE4DC;--white:#FFFFFF;--bg:#FDF8F3;
+  --shadow:0 18px 55px rgba(214,40,40,.09)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:32px 0 64px}
+
+/* ---------- HEADER ---------- */
+header{text-align:center;padding:12px 0 30px}
+.brand{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:18px}.brand-clean{padding:4px 0 2px}
+.brand-badge{width:66px;height:66px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 10px 26px rgba(214,40,40,.28);flex:0 0 auto}
+.brand-badge svg{width:42px;height:42px;display:block}
+.brand-text{text-align:center;line-height:1}
+.brand-text strong{font-family:"Bebas Neue",Manrope,sans-serif;font-size:clamp(44px,7vw,64px);letter-spacing:.025em;display:block;color:var(--ink)}
+.brand-text span{display:block;font-size:10px;font-weight:800;letter-spacing:.38em;text-transform:uppercase;color:var(--red);margin-top:7px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark);background:var(--red-soft);padding:8px 13px;border-radius:999px}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}
+header h1{font-size:clamp(27px,4vw,42px);line-height:1.08;margin:16px 0 8px;letter-spacing:-.04em}
+header p{margin:0;color:var(--muted);font-size:14px}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--white);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);padding:clamp(24px,5vw,46px);display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.hero-label{font-size:14px;color:var(--muted);font-weight:600}
+.hero-number{font-size:clamp(82px,14vw,138px);font-weight:800;line-height:.9;letter-spacing:-.075em;margin:8px 0 10px;color:var(--ink)}
+.hero-copy{font-size:18px;color:var(--muted)}
+.legend{display:grid;gap:8px;margin-top:22px}
+.legend-item{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px}
+.legend-name{display:flex;align-items:center;gap:9px;color:var(--muted)}
+.dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.donut-wrap{display:grid;place-items:center}
+.donut{width:min(290px,70vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--red) 0 86.54%,var(--amber) 86.54% 100%);position:relative}
+.donut:after{content:"";position:absolute;inset:26px;background:var(--white);border-radius:50%}
+.donut-center{position:absolute;z-index:2;text-align:center;width:64%;left:18%;top:50%;transform:translateY(-50%)}
+.donut-center strong{display:block;font-size:30px;line-height:1;font-weight:800}
+.donut-center span{display:block;color:var(--muted);font-size:11px;margin-top:7px}
+
+/* ---------- KPIs ---------- */
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(28,21,18,.025)}
+.kpi strong{font-size:clamp(24px,3vw,32px);line-height:1.1;letter-spacing:-.04em;display:block}
+.kpi span{font-size:12px;color:var(--muted);display:block;margin-top:5px}
+.kpi small{font-size:12px;color:var(--red-dark);font-weight:700;display:block;margin-top:10px}
+
+/* ---------- SECTIONS ---------- */
+section{margin-top:54px}
+.section-head{margin-bottom:17px}
+.section-head h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.035em;margin:0 0 5px}
+.section-head p{color:var(--muted);font-size:13px;margin:0;max-width:780px}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:26px;padding:clamp(18px,3vw,26px);box-shadow:0 12px 34px rgba(28,21,18,.025)}
+
+/* metric bars */
+.metric-row{display:grid;grid-template-columns:minmax(180px,270px) 1fr auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}
+.metric-row:last-child{border-bottom:0}
+.metric-name{font-size:14px;font-weight:700}
+.metric-name small{display:block;color:var(--muted);font-weight:500;margin-top:2px}
+.track{height:12px;background:#F3EAE1;border-radius:999px;overflow:hidden}
+.fill{height:100%;border-radius:999px;background:var(--red)}
+.metric-value{text-align:right;font-weight:800;font-size:19px}
+.metric-value small{display:block;color:var(--muted);font-size:11px;font-weight:500}
+
+/* funnel */
+.funnel{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;text-align:center;gap:8px}
+.funnel strong{font-size:clamp(24px,3.4vw,34px);display:block;letter-spacing:-.04em}
+.funnel span{font-size:11px;color:var(--muted);display:block;margin-top:3px}
+.arrow{font-size:11px;color:var(--muted);font-weight:800;line-height:1.3}
+.arrow i{display:block;font-style:normal;font-size:14px;color:var(--red)}
+.platform-foot{border-top:1px solid var(--line);margin-top:22px;padding-top:16px;font-size:12px;color:var(--muted);text-align:center}
+.platform-foot b{color:var(--ink)}
+
+/* ranking */
+.rank{display:grid;gap:10px}
+.rank-item{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:18px}
+.rank-item.win{border-color:#F6D9A8;background:var(--amber-soft)}
+.rank-n{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--red-soft);color:var(--red-dark);font-weight:800}
+.rank-item.win .rank-n{background:var(--amber);color:#5A3A00}
+.rank-title{font-weight:800;font-size:15px}
+.rank-meta{font-size:11px;color:var(--muted);margin-top:3px}
+.rank-result{text-align:right}
+.rank-result strong{display:block;font-size:26px;line-height:1;letter-spacing:-.03em}
+.rank-result span{font-size:11px;color:var(--muted)}
+
+/* table */
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:17px}
+table{width:100%;border-collapse:collapse;min-width:780px;font-size:12px;background:#fff}
+th,td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:#FBF5EF}
+th:first-child,td:first-child{text-align:left}
+tbody tr:last-child td{border-bottom:0}
+.me td{background:var(--red-soft);font-weight:800}
+.me td:first-child{color:var(--red-dark)}
+
+/* audience */
+.audience-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px;align-items:center}
+.sex-number{font-size:clamp(52px,7.5vw,80px);font-weight:800;line-height:.95;letter-spacing:-.06em;color:var(--red-dark)}
+.sex-number span{font-size:15px;letter-spacing:0;color:var(--muted);font-weight:600;display:block;margin-top:8px}
+.stack{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:18px 0 10px;background:#F3EAE1}
+.stack i{display:block}
+.stack-legend{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.age-row{display:grid;grid-template-columns:64px 1fr 42px;gap:10px;align-items:center;margin:11px 0;font-size:12px}
+.age-track{height:9px;background:#F3EAE1;border-radius:999px;overflow:hidden}
+.age-fill{height:100%;background:var(--red);border-radius:999px}
+.age-val{text-align:right;font-weight:800}
+
+/* mini cards */
+.search-highlight{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+.mini{background:var(--red-pale);border:1px solid #F7DAD5;border-radius:17px;padding:16px}
+.mini strong{font-size:23px;display:block;letter-spacing:-.03em}
+.mini span{font-size:11px;color:var(--muted);display:block;margin-top:4px}
+
+/* insight */
+.insight{font-size:18px;line-height:1.5;margin:0 0 18px;letter-spacing:-.02em}
+.insight b{color:var(--red-dark)}
+
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.note{padding:18px;border:1px solid var(--line);border-radius:18px;font-size:13px;background:var(--white);box-shadow:0 8px 24px rgba(28,21,18,.02)}
+.note b{color:var(--red-dark)}
+
+footer{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}
+
+@media(max-width:820px){
+  .hero{grid-template-columns:1fr;text-align:center}
+  .legend{max-width:460px;margin:22px auto 0;text-align:left}
+  .kpis{grid-template-columns:1fr 1fr}
+  .audience-grid{grid-template-columns:1fr;gap:26px}
+  .funnel{grid-template-columns:1fr 30px 1fr}
+  .funnel>div:nth-child(4),.funnel>div:nth-child(5){display:none}
+  .notes{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  main{width:min(100% - 20px,1080px);padding-top:20px}
+  .brand-text strong{font-size:30px}
+  .hero{border-radius:24px;padding:24px 18px}
+  .kpis{grid-template-columns:1fr 1fr}
+  .card{padding:17px}
+  .metric-row{grid-template-columns:1fr auto}
+  .track{grid-column:1/-1;grid-row:2}
+  .rank-item{grid-template-columns:38px 1fr}
+  .rank-result{grid-column:2;text-align:left}
+  .search-highlight{grid-template-columns:1fr}
+  footer{display:block}
+}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <div class="brand brand-clean"><div class="brand-text"><strong>Tasty Burguer</strong><span>Hamburgueria</span></div></div>
+  <div class="eyebrow">Relatório mensal · Setembro 2026</div>
+  <h1>Resultados de tráfego pago</h1>
+  <p>Meta Ads · 1 a 29 de setembro de 2026</p>
+</header>
+
+<div class="hero">
+  <div>
+    <div class="hero-label">Conversas iniciadas no mês</div>
+    <div class="hero-number">52</div>
+    <div class="hero-copy">pessoas chamaram a Tasty Burguer no WhatsApp a partir dos anúncios</div>
+    <div class="legend">
+      <div class="legend-item"><span class="legend-name"><i class="dot" style="background:var(--red)"></i>ads03 · imagem</span><b>45</b></div>
+      <div class="legend-item"><span class="legend-name"><i class="dot" style="background:var(--amber)"></i>ads01 · seu novo vício</span><b>7</b></div>
+      <div class="legend-item"><span class="legend-name"><i class="dot" style="background:#E4D8CC"></i>ads02 · lançamento</span><b>0</b></div>
+    </div>
+  </div>
+  <div class="donut-wrap">
+    <div class="donut">
+      <div class="donut-center"><strong>R$ 8,28</strong><span>investimento médio<br>por conversa</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="kpis">
+  <div class="card kpi"><strong>R$ 430,58</strong><span>investimento total no mês</span><small>3 anúncios · 1 conjunto</small></div>
+  <div class="card kpi"><strong>52</strong><span>conversas iniciadas</span><small>R$ 8,28 por conversa</small></div>
+  <div class="card kpi"><strong>35.359</strong><span>impressões</span><small>CPM médio de R$ 12,18</small></div>
+  <div class="card kpi"><strong>285</strong><span>cliques no link</span><small>CTR de 0,81% · CPC R$ 1,51</small></div>
+</div>
+
+<section>
+  <div class="section-head">
+    <h2>Funil da campanha</h2>
+    <p>Do anúncio visto até a conversa no WhatsApp. A campanha rodou no objetivo de mensagens, dentro de um único conjunto de anúncios.</p>
+  </div>
+  <div class="panel">
+    <div class="funnel">
+      <div><strong>35.359</strong><span>impressões</span></div>
+      <div class="arrow">0,81%<i>→</i></div>
+      <div><strong>285</strong><span>cliques no link</span></div>
+      <div class="arrow">18,2%<i>→</i></div>
+      <div><strong>52</strong><span>conversas</span></div>
+    </div>
+    <div class="platform-foot">
+      R$ 430,58 investidos · <b>CPM de R$ 12,18</b> · <b>CPC de R$ 1,51</b> · <b>R$ 8,28 por conversa iniciada</b>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Desempenho por anúncio</h2>
+    <p>Ranking dos três criativos que rodaram no período, ordenados por volume de conversas geradas.</p>
+  </div>
+  <div class="panel">
+    <p class="insight">O anúncio <b>ads03 - imagem</b> concentrou <b>45 das 52 conversas</b> do mês — <b>86,5%</b> do total — a um custo de <b>R$ 6,89</b> por conversa.</p>
+    <div class="rank">
+      <div class="rank-item win">
+        <div class="rank-n">1</div>
+        <div>
+          <div class="rank-title">ads03 · imagem</div>
+          <div class="rank-meta">R$ 310,21 investidos · 237 cliques · 25.715 impressões · CTR 0,92% · ativo</div>
+        </div>
+        <div class="rank-result"><strong>45</strong><span>conversas · R$ 6,89 cada</span></div>
+      </div>
+      <div class="rank-item">
+        <div class="rank-n">2</div>
+        <div>
+          <div class="rank-title">ads01 · seu novo vício</div>
+          <div class="rank-meta">R$ 119,42 investidos · 47 cliques · 9.536 impressões · CTR 0,49% · pausado</div>
+        </div>
+        <div class="rank-result"><strong>7</strong><span>conversas · R$ 17,06 cada</span></div>
+      </div>
+      <div class="rank-item">
+        <div class="rank-n">3</div>
+        <div>
+          <div class="rank-title">ads02 · lançamento</div>
+          <div class="rank-meta">R$ 0,95 investidos · 1 clique · 108 impressões · sem entrega relevante</div>
+        </div>
+        <div class="rank-result"><strong>0</strong><span>conversas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Ficha técnica dos criativos</h2>
+    <p>Comparativo direto de investimento, entrega e eficiência entre os três anúncios do conjunto "26.08.26 - público alvo".</p>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Anúncio</th><th>Status</th><th>Investido</th><th>Impressões</th><th>Cliques</th><th>CTR</th><th>CPC</th><th>Conversas</th><th>Custo/conversa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="me"><td>ads03 · imagem</td><td>Ativo</td><td>R$ 310,21</td><td>25.715</td><td>237</td><td>0,92%</td><td>R$ 1,31</td><td>45</td><td>R$ 6,89</td></tr>
+        <tr><td>ads01 · seu novo vício</td><td>Pausado</td><td>R$ 119,42</td><td>9.536</td><td>47</td><td>0,49%</td><td>R$ 2,54</td><td>7</td><td>R$ 17,06</td></tr>
+        <tr><td>ads02 · lançamento</td><td>Pausado</td><td>R$ 0,95</td><td>108</td><td>1</td><td>0,93%</td><td>R$ 0,95</td><td>0</td><td>—</td></tr>
+        <tr><td><b>Total</b></td><td>—</td><td><b>R$ 430,58</b></td><td><b>35.359</b></td><td><b>285</b></td><td><b>0,81%</b></td><td><b>R$ 1,51</b></td><td><b>52</b></td><td><b>R$ 8,28</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Onde o investimento foi</h2>
+    <p>Distribuição do orçamento do mês entre os criativos e o retorno em conversas de cada um.</p>
+  </div>
+  <div class="panel">
+    <div class="metric-row">
+      <div class="metric-name">ads03 · imagem<small>86,5% das conversas do mês</small></div>
+      <div class="track"><div class="fill" style="width:72%"></div></div>
+      <div class="metric-value">R$ 310,21<small>72,0% do investimento</small></div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">ads01 · seu novo vício<small>13,5% das conversas do mês</small></div>
+      <div class="track"><div class="fill" style="width:27.7%;background:var(--amber)"></div></div>
+      <div class="metric-value">R$ 119,42<small>27,7% do investimento</small></div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">ads02 · lançamento<small>sem conversas registradas</small></div>
+      <div class="track"><div class="fill" style="width:1%;background:#E4D8CC"></div></div>
+      <div class="metric-value">R$ 0,95<small>0,2% do investimento</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Quem chamou a Tasty</h2>
+    <p>Perfil das 52 conversas iniciadas a partir dos anúncios, por gênero e faixa etária.</p>
+  </div>
+  <div class="panel audience-grid">
+    <div>
+      <div class="sex-number">57,7% <span>homens</span></div>
+      <div class="stack">
+        <i style="width:57.7%;background:var(--red)"></i>
+        <i style="width:42.3%;background:var(--amber)"></i>
+      </div>
+      <div class="stack-legend"><span>30 homens · R$ 6,63 cada</span><span>22 mulheres · R$ 10,44 cada</span></div>
+    </div>
+    <div>
+      <div class="age-row"><span>25–34</span><div class="age-track"><div class="age-fill" style="width:68%"></div></div><span class="age-val">19</span></div>
+      <div class="age-row"><span>35–44</span><div class="age-track"><div class="age-fill" style="width:100%"></div></div><span class="age-val">28</span></div>
+      <div class="age-row"><span>45–54</span><div class="age-track"><div class="age-fill" style="width:18%"></div></div><span class="age-val">5</span></div>
+      <div class="age-row"><span>55–64</span><div class="age-track"><div class="age-fill" style="width:1.5%"></div></div><span class="age-val">0</span></div>
+      <div class="age-row"><span>65+</span><div class="age-track"><div class="age-fill" style="width:1.5%"></div></div><span class="age-val">0</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Eficiência por faixa etária</h2>
+    <p>Quanto custou cada conversa em cada grupo de idade. Os valores consideram todo o investimento do mês.</p>
+  </div>
+  <div class="search-highlight">
+    <div class="mini"><strong>R$ 6,31</strong><span>por conversa · 45–54 anos (5 conversas)</span></div>
+    <div class="mini"><strong>R$ 7,22</strong><span>por conversa · 35–44 anos (28 conversas)</span></div>
+    <div class="mini"><strong>R$ 10,17</strong><span>por conversa · 25–34 anos (19 conversas)</span></div>
+  </div>
+  <div class="panel">
+    <p class="insight">A faixa de <b>35–44 anos</b> foi o motor da campanha: <b>28 conversas</b> (53,8% do total) a um custo de <b>R$ 7,22</b> cada. Já o público <b>45–54</b> trouxe o melhor custo por conversa, mas com volume pequeno.</p>
+    <div class="metric-row">
+      <div class="metric-name">25–34 anos<small>36,5% das conversas</small></div>
+      <div class="track"><div class="fill" style="width:68%"></div></div>
+      <div class="metric-value">19<small>R$ 193,28 investidos</small></div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">35–44 anos<small>53,8% das conversas</small></div>
+      <div class="track"><div class="fill" style="width:100%"></div></div>
+      <div class="metric-value">28<small>R$ 202,18 investidos</small></div>
+    </div>
+    <div class="metric-row">
+      <div class="metric-name">45–54 anos<small>9,6% das conversas</small></div>
+      <div class="track"><div class="fill" style="width:18%;background:var(--amber)"></div></div>
+      <div class="metric-value">5<small>R$ 31,55 investidos</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>Recado do gestor</h2>
+    <p>Leitura prática do mês e o que entra na próxima rodada de otimização.</p>
+  </div>
+  <div class="notes">
+    <div class="note"><b>Volume:</b> setembro fechou com <b>52 conversas iniciadas</b> a partir de <b>R$ 430,58</b> investidos — custo médio de <b>R$ 8,28</b> por conversa.</div>
+    <div class="note"><b>Campeão:</b> o <b>ads03 - imagem</b> gerou 45 conversas (86,5%) a R$ 6,89 cada, com CTR de 0,92% e o menor CPC da conta (R$ 1,31).</div>
+    <div class="note"><b>Vídeo em queda:</b> o <b>ads01 - seu novo vício</b> custou <b>R$ 17,06</b> por conversa — mais que o dobro do criativo de imagem — e já está pausado.</div>
+    <div class="note"><b>Próximo passo:</b> escalar o criativo de imagem, testar novas variações dele (oferta, preço e chamada), dar entrega real ao <b>ads02</b> e concentrar orçamento na faixa de <b>35–44 anos</b>, que sustentou o volume do mês.</div>
+  </div>
+</section>
+
+<footer>
+  <span>Tasty Burguer · Relatório de tráfego pago</span>
+  <span>Fonte: Meta Ads · 01 a 29/09/2026</span>
+</footer>
+
+</main>
+</body>
+</html>
