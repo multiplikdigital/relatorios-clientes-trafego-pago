@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#005E97">
+<title>Lajes Fortes | Relatório de Tráfego Pago — Setembro 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+ --blue:#006DA8;--blue2:#004E7A;--blue3:#0C88C2;--soft:#EAF5FA;--soft2:#F3F8FB;
+ --ink:#102231;--muted:#657785;--line:#DCE7ED;--white:#fff;--bg:#F6F9FB;
+ --good:#19764D;--warn:#9B6A14;--shadow:0 18px 55px rgba(0,78,122,.08)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+main{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:32px 0 64px}
+header{text-align:center;padding:10px 0 30px}
+.brand{font-size:clamp(34px,6vw,58px);font-weight:800;letter-spacing:-.055em;line-height:1;color:var(--blue);margin-bottom:18px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue2);background:var(--soft);padding:8px 13px;border-radius:999px}
+.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue3)}
+header h1{font-size:clamp(27px,4vw,42px);line-height:1.08;margin:16px 0 8px;letter-spacing:-.04em}
+header p{margin:0;color:var(--muted);font-size:14px}
+.hero{background:var(--white);border:1px solid var(--line);border-radius:32px;box-shadow:var(--shadow);padding:clamp(24px,5vw,46px);display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.hero-label{font-size:14px;color:var(--muted);font-weight:600}.hero-number{font-size:clamp(82px,14vw,138px);font-weight:800;line-height:.9;letter-spacing:-.075em;margin:8px 0 10px;color:var(--blue2)}
+.hero-copy{font-size:18px;color:var(--muted)}.legend{display:grid;gap:8px;margin-top:22px}.legend-item{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px}.legend-name{display:flex;align-items:center;gap:9px;color:var(--muted)}.dot{width:9px;height:9px;border-radius:50%}
+.donut-wrap{display:grid;place-items:center}.donut{width:min(290px,70vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--blue) 0 84.62%,#8FBED5 84.62% 100%);position:relative}.donut:after{content:"";position:absolute;inset:26px;background:#fff;border-radius:50%}.donut-center{position:absolute;z-index:2;text-align:center;width:64%;left:18%;top:50%;transform:translateY(-50%)}.donut-center strong{display:block;font-size:30px;line-height:1;font-weight:800}.donut-center span{display:block;color:var(--muted);font-size:11px;margin-top:7px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px}.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:0 10px 30px rgba(0,78,122,.025)}.kpi strong{font-size:clamp(24px,3vw,32px);line-height:1.1;letter-spacing:-.04em;display:block}.kpi span{font-size:12px;color:var(--muted);display:block;margin-top:5px}.kpi small{font-size:12px;color:var(--blue);font-weight:700;display:block;margin-top:10px}
+section{margin-top:54px}.section-head{margin-bottom:17px}.section-head h2{font-size:clamp(23px,3vw,30px);letter-spacing:-.035em;margin:0 0 5px}.section-head p{color:var(--muted);font-size:13px;margin:0;max-width:850px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(18px,3vw,26px);box-shadow:0 12px 34px rgba(0,78,122,.025)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.platform{position:relative;overflow:hidden}.platform:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--blue)}.platform.google:before{background:#8FBED5}
+.platform-title{margin-bottom:22px}.platform-title h3{font-size:18px;margin:0 0 5px}.platform-title p{font-size:11px;color:var(--muted);margin:0}
+.platform-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.pm{background:var(--soft2);border-radius:15px;padding:14px}.pm strong{font-size:22px;display:block;letter-spacing:-.04em}.pm span{font-size:10px;color:var(--muted)}
+.platform-foot{border-top:1px solid var(--line);margin-top:18px;padding-top:15px;font-size:12px;color:var(--muted)}
+.rank{display:grid;gap:10px}.rank-item{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:18px}.rank-item.win{background:var(--soft);border-color:#CDE6F1}.rank-n{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#EDF3F6;color:var(--blue2);font-weight:800}.rank-item.win .rank-n{background:var(--blue);color:#fff}.rank-title{font-weight:800;font-size:14px}.rank-meta{font-size:11px;color:var(--muted);margin-top:3px}.rank-result{text-align:right}.rank-result strong{display:block;font-size:25px;line-height:1}.rank-result span{font-size:11px;color:var(--muted)}
+.insight{font-size:18px;line-height:1.55;margin:0 0 18px;letter-spacing:-.02em}.insight b{color:var(--blue)}
+.audience-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}.sex-number{font-size:clamp(55px,8vw,84px);font-weight:800;line-height:.95;letter-spacing:-.06em;color:var(--blue)}.sex-number span{font-size:15px;letter-spacing:0;color:var(--muted);font-weight:600;display:block;margin-top:8px}.stack{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:18px 0 10px;background:#EDF3F6}.stack i{display:block}.stack-legend{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);gap:10px}
+.age-row{display:grid;grid-template-columns:64px 1fr 42px;gap:10px;align-items:center;margin:10px 0;font-size:12px}.age-track{height:9px;background:#EDF3F6;border-radius:999px;overflow:hidden}.age-fill{height:100%;background:var(--blue);border-radius:999px}.age-val{text-align:right;font-weight:800}
+.search-highlight{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}.mini{background:var(--soft2);border:1px solid var(--line);border-radius:17px;padding:16px}.mini strong{font-size:23px;display:block}.mini span{font-size:11px;color:var(--muted);display:block;margin-top:4px}
+.data-list{display:grid;gap:9px}.data-row{display:grid;grid-template-columns:minmax(180px,1.5fr) repeat(3,minmax(90px,.6fr));gap:10px;align-items:center;padding:13px 15px;border:1px solid var(--line);border-radius:16px;background:#fff}.data-row.head{background:#F4F8FA;border:0;padding-top:9px;padding-bottom:9px}.data-row.head div{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}.data-row strong{font-size:13px}.data-row span{font-size:12px;text-align:right}.data-row.best{background:var(--soft);border-color:#CDE6F1}
+.auction-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.auction{border:1px solid var(--line);border-radius:17px;padding:16px}.auction.me{background:var(--soft);border-color:#CDE6F1}.auction-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.auction h3{font-size:13px;margin:0;overflow-wrap:anywhere}.share{font-size:22px;font-weight:800;color:var(--blue2);white-space:nowrap}.auction-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}.auction-stats div{background:#F7FAFC;border-radius:10px;padding:9px}.auction-stats b{display:block;font-size:12px}.auction-stats span{font-size:9px;color:var(--muted)}
+.schedule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.day{border:1px solid var(--line);border-radius:17px;padding:15px;display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.day strong{display:block;font-size:14px}.day small{color:var(--muted);font-size:11px}.day-val{text-align:right;font-weight:800;font-size:21px}.day-val span{display:block;font-size:10px;color:var(--muted);font-weight:600}.day.best{background:var(--soft);border-color:#CDE6F1}
+.income-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.income{border:1px solid var(--line);border-radius:17px;padding:15px}.income.best{background:var(--soft);border-color:#CDE6F1}.income h3{font-size:12px;margin:0 0 10px}.income strong{font-size:25px;display:block}.income span{font-size:10px;color:var(--muted)}.income-meta{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+.notes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.note{padding:18px;border:1px solid var(--line);border-radius:18px;font-size:13px;background:#fff}.note b{color:var(--blue)}
+.source-note{font-size:11px;color:var(--muted);margin-top:12px}
+footer{margin-top:46px;padding-top:22px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:20px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center}.legend{max-width:460px;margin:22px auto 0;text-align:left}.kpis{grid-template-columns:1fr 1fr}.two,.audience-grid{grid-template-columns:1fr}.auction-list{grid-template-columns:1fr}.income-grid{grid-template-columns:1fr 1fr}.data-row{grid-template-columns:1fr repeat(3,.65fr)}}
+@media(max-width:560px){main{width:min(100% - 20px,1080px);padding-top:20px}.hero{border-radius:24px;padding:24px 18px}.kpis{grid-template-columns:1fr 1fr}.card{padding:17px}.platform-metrics{grid-template-columns:1fr 1fr}.rank-item{grid-template-columns:38px 1fr}.rank-result{grid-column:2;text-align:left}.search-highlight,.schedule-grid,.income-grid{grid-template-columns:1fr}.data-row,.data-row.head{grid-template-columns:1fr 1fr}.data-row.head{display:none}.data-row strong{grid-column:1/-1}.data-row span{text-align:left}.stack-legend{display:block}.notes{grid-template-columns:1fr}footer{display:block}}
+</style>
+</head>
+<body>
+<main>
+<header>
+ <div class="brand">Lajes Fortes</div>
+ <div class="eyebrow">Relatório mensal · Setembro 2026</div>
+ <h1>Resultados de tráfego pago</h1>
+ <p>Meta Ads + Google Ads · 1 a 30 de setembro de 2026</p>
+</header>
+
+<div class="hero">
+ <div>
+  <div class="hero-label">Contatos e conversões identificados no mês</div>
+  <div class="hero-number">52</div>
+  <div class="hero-copy">oportunidades registradas pelas campanhas da Lajes Fortes</div>
+  <div class="legend">
+   <div class="legend-item"><span class="legend-name"><i class="dot" style="background:var(--blue)"></i>Meta Ads · conversas iniciadas</span><b>44</b></div>
+   <div class="legend-item"><span class="legend-name"><i class="dot" style="background:#8FBED5"></i>Google Ads · conversões</span><b>8</b></div>
+  </div>
+ </div>
+ <div class="donut-wrap"><div class="donut"><div class="donut-center"><strong>R$ 9,54</strong><span>investimento médio<br>por contato/conversão</span></div></div></div>
+</div>
+
+<div class="kpis">
+ <div class="card kpi"><strong>R$ 496,30</strong><span>investimento total</span><small>Meta Ads + Google Ads</small></div>
+ <div class="card kpi"><strong>44</strong><span>conversas pelo Meta</span><small>R$ 7,20 por conversa</small></div>
+ <div class="card kpi"><strong>8</strong><span>conversões pelo Google</span><small>R$ 22,42 por conversão</small></div>
+ <div class="card kpi"><strong>84,31%</strong><span>parcela de impressões no Google</span><small>92,21% no topo da página</small></div>
+</div>
+
+<section class="two">
+ <div class="panel platform">
+  <div class="platform-title"><h3>Campanha de contatos WhatsApp</h3><p>Meta Ads / Instagram</p></div>
+  <div class="platform-metrics">
+   <div class="pm"><strong>44</strong><span>conversas</span></div>
+   <div class="pm"><strong>16.897</strong><span>impressões</span></div>
+   <div class="pm"><strong>R$ 316,95</strong><span>investimento</span></div>
+  </div>
+  <div class="platform-foot">Custo médio de R$ 7,20 por conversa. Os dois anúncios ativos geraram resultado no período.</div>
+ </div>
+ <div class="panel platform google">
+  <div class="platform-title"><h3>Campanha de contatos</h3><p>Google Ads / Rede de pesquisa</p></div>
+  <div class="platform-metrics">
+   <div class="pm"><strong>32</strong><span>cliques</span></div>
+   <div class="pm"><strong>7,64%</strong><span>CTR</span></div>
+   <div class="pm"><strong>8</strong><span>conversões</span></div>
+  </div>
+  <div class="platform-foot">R$ 179,35 investidos · CPC médio de R$ 5,60 · taxa de conversão de 25%.</div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Desempenho dos anúncios no Meta</h2><p>Comparação direta dos dois criativos ativos. O Reels gerou mais volume; o anúncio de Laje EPS teve o menor custo por conversa.</p></div>
+ <div class="panel">
+  <div class="rank">
+   <div class="rank-item win"><div class="rank-n">1</div><div><div class="rank-title">AD12 · Laje EPS</div><div class="rank-meta">R$ 125,83 investidos · 7.793 impressões</div></div><div class="rank-result"><strong>19</strong><span>conversas · R$ 6,62 cada</span></div></div>
+   <div class="rank-item"><div class="rank-n">2</div><div><div class="rank-title">AD6 · Reels “Entrega Lajes Fortes”</div><div class="rank-meta">R$ 191,12 investidos · 9.104 impressões</div></div><div class="rank-result"><strong>25</strong><span>conversas · R$ 7,64 cada</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Perfil de quem converteu no Meta</h2><p>Distribuição das 44 conversas iniciadas por gênero e faixa etária.</p></div>
+ <div class="panel audience-grid">
+  <div>
+   <div class="sex-number">72,7% <span>homens</span></div>
+   <div class="stack"><i style="width:72.7%;background:var(--blue)"></i><i style="width:27.3%;background:#8FBED5"></i></div>
+   <div class="stack-legend"><span>32 homens</span><span>12 mulheres</span></div>
+  </div>
+  <div>
+   <div class="age-row"><span>18–24</span><div class="age-track"><div class="age-fill" style="width:0%"></div></div><span class="age-val">0</span></div>
+   <div class="age-row"><span>25–34</span><div class="age-track"><div class="age-fill" style="width:37.5%"></div></div><span class="age-val">6</span></div>
+   <div class="age-row"><span>35–44</span><div class="age-track"><div class="age-fill" style="width:62.5%"></div></div><span class="age-val">10</span></div>
+   <div class="age-row"><span>45–54</span><div class="age-track"><div class="age-fill" style="width:100%"></div></div><span class="age-val">16</span></div>
+   <div class="age-row"><span>55–64</span><div class="age-track"><div class="age-fill" style="width:50%"></div></div><span class="age-val">8</span></div>
+   <div class="age-row"><span>65+</span><div class="age-track"><div class="age-fill" style="width:25%"></div></div><span class="age-val">4</span></div>
+  </div>
+ </div>
+ <div class="source-note">Destaque: a faixa de 45–54 anos concentrou 16 conversas e apresentou custo aproximado de R$ 5,48 por conversa.</div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Presença nas buscas do Google</h2><p>A Lajes Fortes teve alta cobertura dos leilões em setembro, com presença acima dos concorrentes listados no relatório.</p></div>
+ <div class="search-highlight">
+  <div class="mini"><strong>84,31%</strong><span>parcela de impressões</span></div>
+  <div class="mini"><strong>92,21%</strong><span>taxa no topo da página</span></div>
+  <div class="mini"><strong>77,49%</strong><span>taxa na 1ª posição</span></div>
+ </div>
+ <div class="auction-list">
+  <div class="auction me"><div class="auction-top"><h3>Lajes Fortes</h3><div class="share">84,31%</div></div><div class="auction-stats"><div><b>92,21%</b><span>topo da página</span></div><div><b>77,49%</b><span>1ª posição</span></div></div></div>
+  <div class="auction"><div class="auction-top"><h3>lajespremold.com.br</h3><div class="share">25,18%</div></div><div class="auction-stats"><div><b>88,41%</b><span>topo da página</span></div><div><b>11,59%</b><span>1ª posição</span></div></div></div>
+  <div class="auction"><div class="auction-top"><h3>concreviga.com.br</h3><div class="share">21,53%</div></div><div class="auction-stats"><div><b>64,41%</b><span>topo da página</span></div><div><b>5,08%</b><span>1ª posição</span></div></div></div>
+  <div class="auction"><div class="auction-top"><h3>autenticalajes.com.br</h3><div class="share">18,61%</div></div><div class="auction-stats"><div><b>72,55%</b><span>topo da página</span></div><div><b>9,80%</b><span>1ª posição</span></div></div></div>
+  <div class="auction"><div class="auction-top"><h3>concrelagosconcreto.com.br</h3><div class="share">&lt;10%</div></div><div class="auction-stats"><div><b>91,30%</b><span>topo da página</span></div><div><b>8,70%</b><span>1ª posição</span></div></div></div>
+  <div class="auction"><div class="auction-top"><h3>protenlajesbh.com.br</h3><div class="share">&lt;10%</div></div><div class="auction-stats"><div><b>71,43%</b><span>topo da página</span></div><div><b>0%</b><span>1ª posição</span></div></div></div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Buscas que geraram conversão</h2><p>Termos de pesquisa com conversão dentro do relatório filtrado. O detalhamento disponível representa 10 dos 32 cliques e 3 das 8 conversões totais da campanha.</p></div>
+ <div class="data-list">
+  <div class="data-row head"><div>Termo</div><div>Cliques</div><div>Conversões</div><div>Custo / conversão</div></div>
+  <div class="data-row best"><strong>lajes em Lagoa Santa</strong><span>1 clique</span><span>1 conversão</span><span>R$ 6,66</span></div>
+  <div class="data-row best"><strong>lajes em Vespasiano</strong><span>2 cliques</span><span>1 conversão</span><span>R$ 12,60</span></div>
+  <div class="data-row"><strong>laje pré moldada</strong><span>3 cliques</span><span>1 conversão</span><span>R$ 20,39</span></div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Dias de melhor desempenho no Google</h2><p>A campanha ficou programada de segunda a sexta, das 7h às 18h. Sexta-feira entregou o melhor custo por conversão do período.</p></div>
+ <div class="schedule-grid">
+  <div class="day best"><div><strong>Sexta-feira</strong><small>9 cliques · R$ 53,00 investidos</small></div><div class="day-val">3<span>R$ 17,67 / conv.</span></div></div>
+  <div class="day"><div><strong>Terça-feira</strong><small>8 cliques · R$ 41,75 investidos</small></div><div class="day-val">2<span>R$ 20,88 / conv.</span></div></div>
+  <div class="day"><div><strong>Segunda-feira</strong><small>8 cliques · R$ 45,39 investidos</small></div><div class="day-val">2<span>R$ 22,70 / conv.</span></div></div>
+  <div class="day"><div><strong>Quarta-feira</strong><small>6 cliques · R$ 33,05 investidos</small></div><div class="day-val">1<span>R$ 33,05 / conv.</span></div></div>
+  <div class="day"><div><strong>Quinta-feira</strong><small>1 clique · R$ 6,16 investidos</small></div><div class="day-val">0<span>sem conversão</span></div></div>
+ </div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Renda familiar no Google</h2><p>Leitura das faixas visíveis no relatório de público enviado. A faixa 41–50% apresentou o menor custo por conversão entre os grupos identificados na tela.</p></div>
+ <div class="income-grid">
+  <div class="income"><h3>10% com maior renda</h3><strong>2</strong><span>conversões</span><div class="income-meta">7 cliques · R$ 22,11 por conversão</div></div>
+  <div class="income"><h3>11–20%</h3><strong>2</strong><span>conversões</span><div class="income-meta">5 cliques · R$ 13,56 por conversão</div></div>
+  <div class="income"><h3>21–30%</h3><strong>0</strong><span>conversões</span><div class="income-meta">3 cliques · R$ 17,88 investidos</div></div>
+  <div class="income"><h3>31–40%</h3><strong>1</strong><span>conversão</span><div class="income-meta">4 cliques · R$ 23,62 por conversão</div></div>
+  <div class="income best"><h3>41–50%</h3><strong>2</strong><span>conversões</span><div class="income-meta">3 cliques · R$ 7,80 por conversão</div></div>
+  <div class="income"><h3>50% com menor renda</h3><strong>0</strong><span>conversões</span><div class="income-meta">sem cliques no período exibido</div></div>
+ </div>
+ <div class="source-note">Os números acima reproduzem as faixas visíveis no print de “Públicos-alvo” do Google Ads. A categoria “Desconhecida” aparece no gráfico, mas seus valores detalhados não estavam visíveis na tabela enviada.</div>
+</section>
+
+<section>
+ <div class="section-head"><h2>Recado do gestor</h2><p>Leitura prática dos resultados de setembro e ações prioritárias para a próxima otimização.</p></div>
+ <div class="notes">
+  <div class="note"><b>Resultado geral:</b> foram <b>52 contatos/conversões</b> identificados com R$ 496,30 investidos, chegando a uma média combinada de <b>R$ 9,54 por oportunidade</b>.</div>
+  <div class="note"><b>Meta Ads:</b> segue como principal gerador de volume, com <b>44 conversas a R$ 7,20</b>. O Reels de entrega trouxe mais conversas, enquanto o criativo de Laje EPS foi mais eficiente em custo.</div>
+  <div class="note"><b>Google Ads:</b> a campanha tem excelente presença nas buscas: <b>84,31% de parcela de impressões</b> e 77,49% de taxa na primeira posição. O foco agora é transformar essa forte visibilidade em mais conversões.</div>
+  <div class="note"><b>Próximas ações:</b> reforçar termos locais e de alta intenção como <b>“lajes em Lagoa Santa” e “lajes em Vespasiano”</b>, testar novas variações de anúncios para 35–54 anos no Meta e acompanhar a redistribuição de verba por dia, preservando principalmente sexta, terça e segunda.</div>
+ </div>
+</section>
+
+<footer>
+ <span>Lajes Fortes · Relatório de tráfego pago</span>
+ <span>Fontes: Meta Ads + Google Ads · Setembro/2026</span>
+</footer>
+</main>
+</body>
+</html>
