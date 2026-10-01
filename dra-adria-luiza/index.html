@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dra. Adria Luiza: resultados de setembro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#F7FAF9;--card:#fff;--ink:#22363A;--muted:#6B8083;--line:#E3ECEA;--tan:#7F93A3;--sage:#2F8F8B;--pink:#D9776B;--butter:#BE8A1E;--good:#2F7D4E;--bad:#B4546F;--fx:'Fredoka','Trebuchet MS',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#131F1E;--card:#1C2C2B;--ink:#E8F1F0;--muted:#9FB4B2;--line:#2B3E3C;--good:#8FD0A5;--bad:#E59AB1;--sage:#6CC4BF;--pink:#F09A8E;--butter:#EBC26A;--tan:#A9B8C4}}
+:root[data-theme="dark"]{--bg:#131F1E;--card:#1C2C2B;--ink:#E8F1F0;--muted:#9FB4B2;--line:#2B3E3C;--good:#8FD0A5;--bad:#E59AB1;--sage:#6CC4BF;--pink:#F09A8E;--butter:#EBC26A;--tan:#A9B8C4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:20px 16px 56px}
+h2,.big,.kv,.tab{font-family:var(--fx);font-weight:500}
+h2{font-size:24px;margin:52px 0 4px}
+.sub{color:var(--muted);margin:0 0 18px;font-size:14px;max-width:64ch}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.logo{height:46px;border-radius:12px;background:#FBFAF7}
+.tabs{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:4px;max-width:100%;overflow-x:auto}
+.tab{border:0;background:none;color:var(--muted);padding:8px 18px;border-radius:99px;font-size:15px;cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--ink);color:var(--bg)}
+.tab:focus-visible,.sw input:focus-visible{outline:2px solid var(--tan);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:8px 28px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:36px;padding:36px}
+.big{font-size:clamp(76px,18vw,128px);line-height:.95;letter-spacing:-.02em}
+.hl{font-size:18px;color:var(--muted);margin:8px 0 14px}
+.leg{display:grid;gap:6px;font-size:14px;margin-top:6px}
+.leg span:before,.dot:before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--c);margin-right:8px}
+.don{position:relative;max-width:300px;width:100%;justify-self:center}
+.don svg{display:block;width:100%}
+.don div{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:12px;color:var(--muted)}
+.don b{font-family:var(--fx);font-weight:500;font-size:34px;color:var(--ink);line-height:1}
+.chip{display:inline-block;font-size:13px;padding:2px 10px;border-radius:99px;border:1px solid currentColor;margin-left:8px;vertical-align:middle}
+.up{color:var(--good)}.dn{color:var(--bad)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px 20px}
+.kv{font-size:32px;line-height:1.1}
+.kl{font-size:13px;color:var(--muted)}
+.kd{font-size:13px;margin-top:8px;min-height:20px;color:var(--muted)}
+.kd .chip{margin:0 6px 0 0}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px 24px}
+.row{display:grid;grid-template-columns:minmax(120px,190px) 1fr auto;gap:6px 16px;align-items:center;padding:9px 0}
+.rn{font-size:14px}.pl{color:var(--muted);font-size:12px;margin-left:6px}
+.tr{position:relative;height:28px;background:var(--line);border-radius:99px}
+.gh,.cu{position:absolute;left:0;border-radius:99px}
+.gh{top:0;height:28px;border:1.5px dashed var(--c);background:color-mix(in srgb,var(--c) 22%,transparent)}
+.cu{top:7px;height:14px;background:var(--c)}
+.rv{font-family:var(--fx);font-size:18px;text-align:right;min-width:90px}
+.rv small{display:block;font-family:system-ui,sans-serif;font-size:11px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.st{display:flex;height:34px;border-radius:99px;overflow:hidden;gap:3px;margin:8px 0 18px}
+.st i{display:block;min-width:4px}
+.st+.kl{margin-top:-8px}
+.jr{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:8px;text-align:center}
+.jr .arr{font-size:12px;color:var(--muted);line-height:1.3}
+.jr .kv{font-size:clamp(24px,5vw,40px)}
+.pr{margin:14px 0}
+.pb{position:relative;height:12px;background:var(--line);border-radius:99px;margin-top:8px}
+.pb i{display:block;height:100%;background:var(--sage);border-radius:99px}
+.pb b{position:absolute;top:-5px;width:2px;height:22px;background:var(--ink);opacity:.55}
+.scroll{overflow-x:auto;margin-top:6px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{padding:11px 12px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:500;color:var(--muted);font-size:13px}
+tr:last-child td{border-bottom:0}
+.sw{font-size:13px;color:var(--muted);display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.acts span{border:1px solid var(--line);border-radius:99px;padding:8px 16px;font-size:14px}
+.acts b{font-family:var(--fx);font-weight:500;font-size:18px;margin-right:6px}
+.foot{margin-top:44px;color:var(--muted);font-size:13px;max-width:72ch}
+.manager-notes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.manager-note{padding:16px;border:1px solid var(--line);border-radius:18px;font-size:13px;line-height:1.55}
+.manager-note b{color:var(--sage)}
+@media (max-width:720px){.hero{grid-template-columns:1fr;padding:24px;border-radius:28px}.two{grid-template-columns:1fr}.row{grid-template-columns:1fr auto}.tr{grid-column:1/-1;order:3}.manager-notes{grid-template-columns:1fr}#cp{font-size:10px}#cp th,#cp td{padding:7px 3px;font-size:10px}#cp th:first-child,#cp td:first-child{width:24%}}
+
+.head{display:grid;justify-items:center;gap:12px;text-align:center;margin:6px 0 30px}
+.plate{background:#FBFAF7;border-radius:34px;padding:16px 34px;box-shadow:0 1px 0 var(--line)}
+.logo{display:block;height:clamp(64px,15vw,96px);border-radius:0;background:none}
+.hs{margin:0;color:var(--muted);font-size:14px}
+.ctl{display:flex;gap:10px 18px;align-items:center;justify-content:center;flex-wrap:wrap}
+.ph{font-family:var(--fx);font-size:20px;margin:0 0 14px;line-height:1.35;max-width:60ch}
+#cp{min-width:0;table-layout:fixed;font-size:12px}
+#cp th,#cp td{white-space:normal;padding:9px 7px;overflow-wrap:anywhere;line-height:1.3}
+#cp th:first-child,#cp td:first-child{width:22%;text-align:left}
+.auction-wrap{width:100%;overflow-x:visible}
+td:first-child,th:first-child{position:sticky;left:0;background:var(--card)}
+.me td{background:color-mix(in srgb,var(--butter) 30%,var(--card));font-weight:600;font-size:15px}
+.me td:first-child{border-left:4px solid var(--butter)}
+.pv{display:block;font-size:11px;font-weight:400;color:var(--muted)}
+
+.me td{background:color-mix(in srgb,var(--butter) 20%,var(--card))}
+.cc{display:flex;gap:clamp(6px,2vw,18px);padding-top:28px}
+.cl{flex:1;min-width:0;text-align:center}
+.cw{position:relative;border-bottom:1px solid var(--line)}
+.cb,.cg{position:absolute;bottom:0;border-radius:12px 12px 3px 3px}
+.cb{left:22%;right:22%;background:var(--c)}
+.cg{left:9%;right:9%;border:1.5px dashed var(--c);border-bottom:0;background:color-mix(in srgb,var(--c) 14%,transparent)}
+.cv{position:absolute;left:0;right:0;font-family:var(--fx);font-size:15px}
+.cx{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.35}
+.sc{width:100%;display:block}
+.sx{font-size:11px;fill:var(--muted)}
+.sl{font-size:12px;fill:var(--ink)}
+.brand h1{font-family:var(--fx);font-weight:500;font-size:clamp(34px,8vw,54px);margin:0;line-height:1.05}
+.brand p{margin:6px 0 0;color:var(--muted);font-size:15px;letter-spacing:.04em}
+</style></head><body><main>
+<header class="head"><div class="brand"><h1>Dra. Adria Luiza</h1><p>Pediatra em Belo Horizonte</p></div><p class="hs">Resultados de tráfego pago</p><div class="ctl"><div class="tabs" id="tabs" role="tablist"></div><label class="sw" id="swl"><input type="checkbox" id="sw" checked>Mostrar mês anterior como sombra</label></div></header>
+<section class="hero" id="hero"></section>
+<div class="kpis" id="kpis"></div>
+
+<h2>Conversas por campanha</h2>
+<p class="sub">A barra cheia é este mês. O contorno tracejado, quando aparece, mostra como a mesma campanha foi no mês anterior.</p>
+<div class="panel" id="c1"></div>
+
+<h2>Custo por conversa</h2>
+<p class="sub">Quanto custou, em média, cada pessoa que chamou no WhatsApp. Quanto menor a barra, melhor.</p>
+<div class="panel" id="c2"></div>
+
+<div class="two">
+ <div><h2>Investimento × conversas</h2><p class="sub">Cada ponto é uma campanha. Quanto mais acima da linha da média, mais barato saiu cada contato.</p><div class="panel" id="c3"></div></div>
+ <div><h2>Do anúncio à conversa</h2><p class="sub">O caminho de quem viu o anúncio até chamar a clínica.</p><div class="panel" id="c4"></div></div>
+</div>
+
+<div id="aud"><h2>Perfil de quem chamou</h2><p class="sub">Quem são as pessoas que mais chamaram no WhatsApp a partir dos anúncios do Meta (Instagram e Facebook).</p><div class="panel"><p class="ph" id="ah"></p><div class="two"><div><div class="kl">Mulheres e homens</div><div id="ag"></div></div><div><div class="kl">Por faixa de idade</div><div id="ai"></div></div></div><div id="arw"><div class="kl" style="margin-top:18px">Onde moram</div><div id="ar"></div></div></div></div>
+
+<h2>Presença nas buscas do Google</h2>
+<p class="sub">Sua posição diante de outros anunciantes nas mesmas buscas. A sua linha está em destaque.</p>
+<div class="panel"><p class="ph" id="ph"></p><div class="auction-wrap"><table id="cp"></table></div><div class="acts" id="acts"></div></div>
+
+<div id="bus"><h2>O que as pessoas pesquisaram no Google</h2><p class="sub">As buscas que levaram alguém a ver o anúncio da Dra. Adria, clicar nele ou chamar a clínica.</p><div class="panel"><p class="ph" id="bh"></p><div class="kl">Buscas que trouxeram contatos</div><div id="bb"></div><div class="kl" style="margin-top:18px">Buscas mais frequentes</div><div class="scroll"><table id="bt"></table></div></div></div>
+
+<div id="dia"><h2>Dias em que mais clicaram</h2><p class="sub">Cliques nos anúncios do Google por dia da semana, com o valor investido abaixo de cada dia. Os dois dias mais fortes ficam em destaque. Os anúncios rodam de segunda a sexta, das 6h às 21h, e aos sábados das 8h às 11h.</p><div class="panel" id="dd"></div></div>
+
+<div id="ren"><h2>Renda das famílias que clicaram</h2><p class="sub">O Google estima a renda da família de quem clicou no anúncio e divide em faixas. O número abaixo de cada faixa é a quantidade de contatos gerados.</p><div class="panel"><p class="ph" id="rh"></p><div id="rd"></div></div></div>
+
+<h2>Recado do gestor</h2>
+<p class="sub">O que foi feito no mês e o que vem a seguir.</p>
+<div class="panel" id="notes"></div>
+<p class="foot">Dados do Meta Ads e do Google Ads. No Meta, conversa é uma conversa por mensagem iniciada pelo anúncio. No Google, é um contato feito pelo botão de WhatsApp. Cliques do Meta são cliques no link do anúncio.</p>
+</main>
+<script>
+/* Para adicionar um mês: copie um bloco de DATA, mude a chave (ano-mês) e os números. A sombra usa o mês anterior automaticamente. */
+const DATA={'2026-09':{l:'Setembro 2026',s:'Set 2026',c:[{"id": "wpp", "n": "Campanha de contatos Whatsapp", "p": "Meta Ads/Instagram", "c": "--sage", "s": 159.11, "r": 6, "k": 34, "i": 5586}, {"id": "goog", "n": "Campanha de contatos Whatsapp", "p": "Google Ads/Rede de pesquisa", "c": "--butter", "s": 593.58, "r": 5, "k": 71, "i": 1389}],g:{lig:1,rota:3,out:13},v:[["Dra. Adria (você)", 0.4405, "—", "—", 0.7715, 0.5981, "—"], ["drpedrobarbosapediatra.com.br", 0.106, 0.1586, 0.5508, 0.8324, 0.5196, 0.402]],aud:{sexo:{mulheres:6,homens:0,nd:0},idade:[["18-24", 0], ["25-34", 4], ["35-44", 2], ["45-54", 0]]},busca:{tot:1389,det:512,termos:[["clinica infantil pampulha", 60, 4, 0.0], ["pediatra belo horizonte", 49, 1, 0.0], ["pediatra bh", 35, 1, 0.0], ["pediatra", 28, 0, 0.0], ["pediatra perto de mim", 26, 1, 0.0], ["pediatra em bh", 14, 1, 0.0], ["clínica pampulha infantil", 13, 1, 0.0], ["pediatras bh", 12, 1, 1.0], ["pediatra particular bh", 12, 1, 1.0]]},dias:[["Segunda", 13, 277, 119.15], ["Terça", 25, 458, 165.76], ["Quarta", 15, 290, 88.31], ["Quinta", 7, 201, 61.56], ["Sexta", 7, 121, 88.92], ["Sábado", 4, 42, 69.88]],renda:[["Top 10%", "dos 10% com maior renda", 38, 356.1, 3], ["11–20%", "da faixa de 11% a 20%", 15, 119.57, 1], ["21–30%", "da faixa de 21% a 30%", 13, 77.15, 1], ["31–40%", "da faixa de 31% a 40%", 0, 0, 0], ["41–50%", "da faixa de 41% a 50%", 0, 0, 0], ["Menor 50%", "dos 50% com menor renda", 0, 0, 0], ["Sem dado", "sem renda identificada pelo Google", 5, 40.76, 0]],n:[
+'<b>Volume:</b> setembro fechou com 11 conversas no WhatsApp a partir de R$ 752,69 investidos, com custo médio de R$ 68,43 por conversa.',
+'<b>Meta Ads:</b> gerou 6 das 11 conversas com R$ 159,11 investidos — cerca de R$ 26,52 por conversa. Mesmo com menor investimento, foi o canal mais eficiente em custo no mês.',
+'<b>Google Ads:</b> gerou 5 conversas com R$ 593,58 investidos — cerca de R$ 118,72 por conversa. A campanha apareceu em 44,05% das buscas e, quando apareceu, esteve no topo da página em 77,15% das vezes. O principal ponto de atenção é aumentar a eficiência das buscas que consomem verba sem gerar contato.',
+'<b>Próximos passos:</b> manter o Meta como principal referência de eficiência e testar novos criativos para ampliar o volume; no Google, priorizar termos de maior intenção, revisar buscas sem conversão e negativas e acompanhar de perto “pediatras bh” e “pediatra particular bh”, que já registraram contatos. Como o mês teve apenas 11 conversas, as otimizações devem ser graduais e validadas com mais dados antes de mudanças maiores.'
+]}};
+const K=Object.keys(DATA).sort(),$=id=>document.getElementById(id),L='pt-BR';
+let cur=K[K.length-1],cmp=true;
+const br=n=>n.toLocaleString(L,{style:'currency',currency:'BRL'}),nu=n=>Math.round(n).toLocaleString(L);
+const pc=(n,d=1)=>n.toLocaleString(L,{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+const pf=n=>typeof n=='number'?pc(n*100):n;
+const sum=(a,f)=>a.reduce((x,y)=>x+y[f],0);
+const chip=(a,b,inv)=>{if(b==null||!b)return '';const d=(a-b)/b*100,good=inv?d<=0:d>=0;return `<span class="chip ${good?'up':'dn'}">${d>=0?'▲':'▼'} ${pc(Math.abs(d),0)}</span>`};
+const ring=(cs,r,w,o)=>{const T=sum(cs,'r'),C=2*Math.PI*r;let off=0;return cs.map(x=>{const l=x.r/T*C,e=`<circle cx="110" cy="110" r="${r}" fill="none" stroke="var(${x.c})" stroke-width="${w}" stroke-opacity="${o}" stroke-dasharray="${Math.max(l-3,1)} ${C}" stroke-dashoffset="${-off}" transform="rotate(-90 110 110)"/>`;off+=l;return e}).join('')};
+const bars=(rows,f)=>{const m=Math.max(...rows.map(r=>Math.max(r.v,r.g||0)));return rows.map(r=>`<div class="row"><div class="rn"><span class="dot" style="--c:var(${r.c})"></span>${r.n}<span class="pl">${r.p}</span></div><div class="tr">${r.g!=null?`<i class="gh" style="width:${r.g/m*100}%;--c:var(${r.c})"></i>`:''}<i class="cu" style="width:${r.v/m*100}%;--c:var(${r.c})"></i></div><div class="rv">${f(r.v)}${r.g!=null?`<small>antes ${f(r.g)}</small>`:''}</div></div>`).join('')};
+const stack=(cs,f,t)=>`<div class="st">${cs.map(x=>`<i style="width:${x[f]/t*100}%;background:var(${x.c})" title="${x.n}"></i>`).join('')}</div>`;
+const cols=(rows,f)=>{const m=Math.max(...rows.map(r=>Math.max(r.v,r.g||0)),1),H=170,hg=rows.some(r=>r.g!=null);return `<div class="cc">${rows.map(r=>{const t=Math.max(r.v,r.g||0)/m*H;return `<div class="cl"><div class="cw" style="height:${H}px">${r.g!=null?`<i class="cg" style="height:${r.g/m*H}px;--c:${r.c}"></i>`:''}<i class="cb" style="height:${r.v/m*H}px;--c:${r.c}"></i><span class="cv" style="bottom:${t+4}px">${f(r.v)}</span></div><div class="cx">${r.n}</div></div>`}).join('')}</div>${hg?'<div class="kl" style="margin-top:10px">Contorno tracejado: mês anterior.</div>':''}`};
+const nice=m=>{const p=10**Math.floor(Math.log10(m)),n=m/p;return [1,1.2,1.5,2,2.5,3,4,5,6,8,10].find(k=>k>=n)*p};
+const scat=(C,PC,G,S,R)=>{const W=360,H=250,l=46,b=34,t=16,r=18,pw=W-l-r,ph=H-t-b,all=[...C,...(G?PC:[])],xm=nice(Math.max(...all.map(x=>x.s))*1.05),ym=nice(Math.max(...all.map(x=>x.r))*1.05),X=v=>l+v/xm*pw,Y=v=>t+ph-v/ym*ph,sl=R/S,ex=Math.min(xm,ym/sl);
+ const gr=[0,.5,1].map(f=>`<line x1="${l}" x2="${W-r}" y1="${Y(ym*f)}" y2="${Y(ym*f)}" style="stroke:var(--line)"/><text x="${l-6}" y="${Y(ym*f)+4}" text-anchor="end" class="sx">${nu(ym*f)}</text><text x="${X(xm*f)}" y="${H-b+16}" text-anchor="middle" class="sx">R$ ${nu(xm*f)}</text>`).join('');
+ const pv=G?C.map(x=>{const q=PC.find(y=>y.id==x.id);return q?`<line x1="${X(q.s)}" y1="${Y(q.r)}" x2="${X(x.s)}" y2="${Y(x.r)}" style="stroke:var(${x.c});stroke-dasharray:4 3"/><circle cx="${X(q.s)}" cy="${Y(q.r)}" r="9" style="fill:none;stroke:var(${x.c});stroke-dasharray:3 3;stroke-width:1.5"/>`:''}).join(''):'';
+ const dots=C.map(x=>{const cx=X(x.s),e=cx>l+pw*.6;return `<circle cx="${cx}" cy="${Y(x.r)}" r="9" style="fill:var(${x.c})"/><text x="${cx+(e?-14:14)}" y="${Y(x.r)+4}" text-anchor="${e?'end':'start'}" class="sl">${x.n}</text>`}).join('');
+ return `<svg viewBox="0 0 ${W} ${H}" class="sc" role="img" aria-label="Investimento e conversas por campanha">${gr}<line x1="${X(0)}" y1="${Y(0)}" x2="${X(ex)}" y2="${Y(ex*sl)}" style="stroke:var(--ink);stroke-opacity:.4;stroke-dasharray:5 4"/><text x="${W-r}" y="${H-3}" text-anchor="end" class="sx">Investimento no mês</text><text x="${l}" y="${t-4}" class="sx">Conversas</text>${pv}${dots}</svg><div class="kl">A linha tracejada é o custo médio: ${br(S/R)} por conversa.</div>`};
+function render(){
+ const D=DATA[cur],pk=K[K.indexOf(cur)-1],P=DATA[pk],G=cmp&&P,C=D.c,PC=P?P.c:[];
+ const S=sum(C,'s'),R=sum(C,'r'),Kc=sum(C,'k'),I=sum(C,'i'),pS=P&&sum(PC,'s'),pR=P&&sum(PC,'r'),pK=P&&sum(PC,'k'),pI=P&&sum(PC,'i');
+ $('tabs').innerHTML=K.map(k=>`<button class="tab" role="tab" aria-selected="${k==cur}" data-k="${k}">${DATA[k].s}</button>`).join('');
+ document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{cur=b.dataset.k;render()});
+ $('swl').style.display=P?'inline-flex':'none';
+ $('hero').innerHTML=`<div><div class="hl">${D.l}</div><div class="big">${nu(R)}</div><div class="hl">conversas no WhatsApp${G?chip(R,pR):''}</div><div class="leg">${C.map(x=>`<span style="--c:var(${x.c})">${x.n}: <b>${x.r}</b></span>`).join('')}</div></div><div class="don"><svg viewBox="0 0 220 220" role="img" aria-label="Divisão das conversas por campanha"><circle cx="110" cy="110" r="88" fill="none" stroke="var(--line)" stroke-width="26"/>${ring(C,88,26,1)}${G?ring(PC,62,9,.45):''}</svg><div><b>${br(S/R)}</b>por conversa${G?'<span>anel interno: mês anterior</span>':''}</div></div>`;
+ const kp=[[br(S),'investido',S,pS,1,0],[br(S/R),'custo médio por conversa',S/R,P&&pS/pR,1,1],[nu(Kc),'cliques nos anúncios',Kc,pK,1,0],[pc(R/Kc*100),'dos cliques viraram conversa',R/Kc,P&&pR/pK,1,0]];
+ $('kpis').innerHTML=kp.map(a=>`<div class="kpi"><div class="kv">${a[0]}</div><div class="kl">${a[1]}</div><div class="kd">${G?chip(a[2],a[3],a[5])+'vs mês anterior':(P?'':'Primeiro mês no painel')}</div></div>`).join('');
+ const pm=id=>{const x=PC.find(y=>y.id==id);return G&&x?x:null};
+ $('c1').innerHTML=bars(C.map(x=>({...x,v:x.r,g:pm(x.id)?pm(x.id).r:null})),v=>nu(v));
+ $('c2').innerHTML=bars(C.filter(x=>x.r>0).map(x=>({...x,v:x.s/x.r,g:pm(x.id)&&pm(x.id).r>0?pm(x.id).s/pm(x.id).r:null})),br);
+ $('c3').innerHTML=scat(C.filter(x=>x.r>0),PC.filter(x=>x.r>0),G,S,R)+`<div class="leg" style="margin-top:10px">${C.map(x=>`<span style="--c:var(${x.c})">${x.n}: ${pc(x.s/S*100,0)} do dinheiro, ${pc(x.r/R*100,0)} das conversas</span>`).join('')}</div>`;
+ $('c4').innerHTML=`<div class="jr"><div><div class="kv">${nu(I)}</div><div class="kl">viram o anúncio</div></div><div class="arr">${pc(Kc/I*100,1)}<br>clicaram</div><div><div class="kv">${nu(Kc)}</div><div class="kl">clicaram</div></div><div class="arr">${pc(R/Kc*100,0)}<br>chamaram</div><div><div class="kv">${nu(R)}</div><div class="kl">conversas</div></div></div>${G?`<p class="kl" style="margin-top:18px">Mês anterior: ${nu(pI)} viram, ${nu(pK)} clicaram, ${nu(pR)} conversas.</p>`:''}`;
+  const me=r=>r[0].includes('(você)'),num=v=>typeof v=='number'?v:0;
+ const rows=[...D.v].sort((a,b)=>me(b)-me(a)||num(b[1])-num(a[1])),mr=rows[0],pmr=G&&P.v.find(me),mx=Math.max(...rows.filter(r=>!me(r)).map(r=>num(r[1])));
+ $('ph').innerHTML=`O anúncio da Dra. Adria apareceu em <b>${pc(mr[1]*100,0)}</b> das buscas, contra no máximo ${pc(mx*100,1)} de cada outro anunciante.`;
+ $('cp').innerHTML='<tr><th>Anunciante</th><th>Aparece nas buscas</th><th>Aparece junto com você</th><th>Fica acima de você</th><th>No topo da página</th><th>Em 1º lugar</th><th>Você fica à frente</th></tr>'+rows.map(r=>`<tr${me(r)?' class="me"':''}><td>${r[0]}</td>${[1,2,3,4,5,6].map(i=>`<td>${pf(r[i])}${me(r)&&pmr&&typeof r[i]=='number'&&typeof pmr[i]=='number'?`<span class="pv">antes ${pf(pmr[i])}</span>`:''}</td>`).join('')}</tr>`).join('');
+ $('acts').innerHTML=`<span class="kl" style="width:100%">Outras ações de quem chegou pelo Google</span>`+[[D.g.lig,'ligação','ligações'],[D.g.rota,'pedido de rota até a clínica','pedidos de rota até a clínica'],[D.g.out,'outra interação','outras interações']].filter(a=>a[0]>0).map(a=>`<span><b>${a[0]}</b>${a[0]==1?a[1]:a[2]}</span>`).join('');
+ const A=D.aud;$('aud').style.display=A?'':'none';
+ if(A){const pa=G&&P.aud,S2=A.sexo,tt=S2.mulheres+S2.homens+(S2.nd||0),wm=S2.mulheres/tt,hm=S2.homens/tt,ti=[...A.idade].sort((a,b)=>b[1]-a[1])[0],af=l=>l.includes('+')?l.replace('+',' anos ou mais'):l.replace('-',' a ')+' anos',gm=(l,k)=>{const x=pa&&pa[k]&&pa[k].find(y=>y[0]==l);return x?x[1]:null};
+  $('ah').innerHTML=`<b>${pc(Math.max(wm,hm)*100,0)}</b> das conversas vieram de ${wm>=hm?'mulheres':'homens'}, e a faixa que mais chamou foi a de <b>${af(ti[0])}</b>.`;
+  $('ag').innerHTML=`<div class="st"><i style="width:${wm*100}%;background:var(--pink)"></i><i style="width:${hm*100}%;background:var(--sage)"></i><i style="width:${(1-wm-hm)*100}%;background:var(--tan)"></i></div><div class="leg"><span style="--c:var(--pink)">Mulheres: ${pc(wm*100,0)}</span><span style="--c:var(--sage)">Homens: ${pc(hm*100,0)}</span>${S2.nd?`<span style="--c:var(--tan)">Não identificado: ${pc((1-wm-hm)*100,0)}</span>`:''}</div>`;
+  const tp=Math.max(...A.idade.map(x=>x[1]));$('ai').innerHTML=cols(A.idade.map(x=>({n:x[0],c:x[1]==tp?'var(--pink)':'color-mix(in srgb,var(--pink) 45%,var(--card))',v:x[1],g:gm(x[0],'idade')})),nu);
+  $('arw').style.display=A.regiao?'':'none';
+  if(A.regiao)$('ar').innerHTML=bars(A.regiao.map(x=>({n:x[0],p:'',c:'--tan',v:x[1],g:gm(x[0],'regiao')})),nu)}
+ const B=D.busca;$('bus').style.display=B?'':'none';
+ if(B){const f1=v=>v.toLocaleString(L,{maximumFractionDigits:1}),pb=G&&P.busca,gt=t=>{const x=pb&&pb.termos.find(y=>y[0]==t);return x?x[3]:null},tc=B.termos.filter(t=>t[3]>0).sort((a,b)=>b[3]-a[3]);
+  $('bh').innerHTML=`O Google detalha as buscas de ${nu(B.det)} das ${nu(B.tot)} vezes em que o anúncio apareceu.${tc.length>1&&tc[1][3]==tc[0][3]?` As buscas que mais trouxeram contatos foram <b>“${tc[0][0]}”</b> e <b>“${tc[1][0]}”</b>.`:tc.length?` A que mais trouxe contatos foi <b>“${tc[0][0]}”</b>.`:''}`;
+  $('bb').innerHTML=bars(tc.map(t=>({n:t[0],p:'',c:'--butter',v:t[3],g:gt(t[0])})),f1);
+  $('bt').innerHTML='<tr><th>Busca</th><th>Apareceu</th><th>Cliques</th><th>Contatos</th></tr>'+[...B.termos].sort((a,b)=>b[1]-a[1]).slice(0,8).map(t=>`<tr><td>${t[0]}</td><td>${nu(t[1])}</td><td>${nu(t[2])}</td><td>${t[3]?f1(t[3]):'—'}</td></tr>`).join('')}
+ const W=D.dias;$('dia').style.display=W?'':'none';
+ if(W){const gd=n=>{const x=G&&P.dias&&P.dias.find(y=>y[0]==n);return x?x[1]:null};const t2=[...W].sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>x[0]);$('dd').innerHTML=cols(W.map(x=>({n:x[0].slice(0,3)+'<br>R$ '+nu(x[3]),c:t2.includes(x[0])?'var(--butter)':'color-mix(in srgb,var(--butter) 45%,var(--card))',v:x[1],g:gd(x[0])})),nu)}
+ const RN=D.renda;$('ren').style.display=RN?'':'none';
+ if(RN){const tc=RN.reduce((a,x)=>a+x[2],0),ct=RN.reduce((a,x)=>a+x[4],0),mx=Math.max(...RN.map(x=>x[2])),tp=RN.find(x=>x[2]==mx),pr=G&&P.renda,gr=l=>{const x=pr&&pr.find(y=>y[0]==l);return x?x[2]:null};
+  $('rh').innerHTML=`<b>${pc(tp[2]/tc*100,0)}</b> dos cliques vieram de famílias ${tp[1]}, que geraram ${tp[4]} dos ${ct} contatos.`;
+  $('rd').innerHTML=cols(RN.map(x=>({n:x[0]+'<br>'+(x[4]?x[4]+(x[4]==1?' contato':' contatos'):'—'),c:x[2]==mx?'var(--sage)':'color-mix(in srgb,var(--sage) 45%,var(--card))',v:x[2],g:gr(x[0])})),nu)}
+ $('notes').innerHTML=`<div class="manager-notes">${D.n.map(t=>`<div class="manager-note">${t}</div>`).join('')}</div>`;
+}
+$('sw').onchange=e=>{cmp=e.target.checked;render()};
+render();
+</script></body></html>
