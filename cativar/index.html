@@ -125,6 +125,8 @@ td:first-child,th:first-child{position:sticky;left:0;background:var(--card)}
 
 <div id="dia"><h2>Dias em que mais clicaram</h2><p class="sub">Cliques nos anúncios do Google por dia da semana, com o valor investido abaixo de cada dia. Os dois dias mais fortes ficam em destaque. Os anúncios rodam de segunda a sexta, das 7h15 às 17h, e aos sábados até as 11h.</p><div class="panel" id="dd"></div></div>
 
+<div id="ren"><h2>Renda familiar no Google</h2><p class="sub">Distribuição dos cliques e do investimento entre as faixas de renda exibidas pelo Google Ads. O print enviado não mostra conversões por faixa, então esta seção não atribui desempenho de conversão à renda.</p><div class="panel"><p class="ph" id="rh"></p><div id="rb"></div></div></div>
+
 <h2>Recado do gestor</h2>
 <p class="sub">O que foi feito no mês e o que vem a seguir.</p>
 <div class="panel" id="notes"></div>
@@ -135,6 +137,7 @@ td:first-child,th:first-child{position:sticky;left:0;background:var(--card)}
 const RIV=[['Cativar (você)',.8197,'—','—',.9162,.6806,'—'],['vitacea.com.br',.1588,.1754,.0746,.8514,0,.809],['dentista24horas.net.br',.1524,.1597,.6721,.9577,.6338,.7318],['dramilenamenezzes.com.br',.1459,.1754,.1045,.7206,.0588,.8047],['nucleoodontologicosorriso.com',.1416,.1571,.05,.6364,.0152,.8133],['villaodontologia.com.br',.1266,.1466,.0893,.8644,.0169,.809],['draelisamarotta.com.br',.1159,.1283,.2041,.8704,.0926,.7983],['draluisaottoni.com.br','< 10%',.0628,.1667,.8077,.1154,.8112],['redeodonto.com.br','< 10%',.0733,.0714,.6333,.0667,.8155],['clinicasorri.com.br','< 10%',.0733,.1429,.8929,.0357,.8112],['drgustavoespindola.com.br','< 10%',.089,.1176,.6154,.0513,.8112]];
 /* Blocos opcionais (aparecem só quando existirem): aud:{sexo:{mulheres,homens,nd},idade:[['25-34',n]],regiao:[['Pampulha',n]]} (n = conversas do Meta); busca:{tot,det,termos:[[termo,apareceu,cliques,contatos]]}; dias:[[dia,cliques,impressões,custo]] */
 const RIV7=[["Cativar (você)", 0.8109, "—", "—", 0.9223, 0.6408, "—"], ["nucleoodontologicosorriso.com", 0.1413, 0.1689, 0.0476, 0.7231, 0.0462, 0.8043], ["draluisaottoni.com.br", 0.1304, 0.126, 0.2766, 0.9, 0.15, 0.7826], ["renatabrugnara.com.br", "< 10%", 0.0751, 0.1071, 0.7333, 0.0667, 0.8043], ["dentista24horas.net.br", 0.1565, 0.1743, 0.5538, 0.9028, 0.5694, 0.7326], ["clinicaodontoellos.com.br", "< 10%", 0.0858, 0.0313, 0.4722, 0.0, 0.8087], ["dramilenamenezzes.com.br", 0.1304, 0.1394, 0.1154, 0.6167, 0.0667, 0.7978], ["raquelbraganca.com.br", "< 10%", 0.0643, 0.1667, 0.48, 0.12, 0.8022], ["codent.com.br", "< 10%", 0.0885, 0.0303, 0.6364, 0.0, 0.8087], ["draelisamarotta.com.br", 0.1261, 0.1367, 0.1569, 0.8103, 0.069, 0.7935], ["villaodontologia.com.br", 0.163, 0.1796, 0.2239, 0.9333, 0.1067, 0.7783], ["redeodonto.com.br", "< 10%", 0.0858, 0.125, 0.7143, 0.0, 0.8022], ["clinicasorri.com.br", "< 10%", 0.0563, 0.2381, 0.84, 0.0, 0.8], ["vitacea.com.br", 0.1413, 0.1609, 0.1333, 0.6923, 0.0308, 0.7935], ["drgustavoespindola.com.br", "< 10%", 0.0831, 0.0323, 0.5758, 0.0, 0.8087]];
+const RIV9=[["Cativar (você)",0.7817,"—","—",0.9264,0.7208,"—"],["draelisamarotta.com.br",0.1218,0.1429,0.1364,0.8333,0.0972,0.7665],["villaodontologia.com.br","< 10%",0.0996,0.2391,0.8261,0.1304,0.7631],["redeodonto.com.br","< 10%",0.0628,0.0345,0.7188,0.0313,0.78],["clinicasorri.com.br","< 10%",0.119,0.0727,0.8276,0.0862,0.775],["vitacea.com.br","< 10%",0.0952,0.0909,0.6818,0.0227,0.775],["drgustavoespindola.com.br","< 10%",0.0693,0.0625,0.7273,0,0.7783],["nucleoodontologicosorriso.com",0.1235,0.1429,0.1212,0.6164,0.0822,0.7682],["cetocentroodontologico.com.br","< 10%",0.0606,0.0714,0.7,0,0.7783],["dentista24horas.net.br","< 10%",0.0866,0.8,0.9778,0.7556,0.7276],["dramilenamenezzes.com.br","< 10%",0.0996,0.0217,0.74,0,0.78]];
 const DATA={'2026-07':{l:'Julho 2026',s:'Jul 2026',c:[{"id": "sala", "n": "Sala comercial", "p": "Meta", "c": "--sage", "s": 393.12, "r": 22, "k": 72, "i": 10867}, {"id": "pc", "n": "Primeira consulta (WhatsApp)", "p": "Meta", "c": "--pink", "s": 193.54, "r": 2, "k": 22, "i": 5494}, {"id": "pc0", "n": "Primeira consulta (mensagens)", "p": "Meta", "c": "--tan", "s": 7.06, "r": 0, "k": 0, "i": 185}, {"id": "goog", "n": "Pesquisa geral", "p": "Google", "c": "--butter", "s": 592.67, "r": 17, "k": 41, "i": 830}],g:{lig:2,rota:1,out:0},v:RIV7,aud:{sexo:{mulheres:23,homens:0,nd:1},idade:[["18-24", 1], ["25-34", 6], ["35-44", 7], ["45-54", 6], ["55-64", 2], ["65+", 2]]},busca:{tot:830,det:282,termos:[["odontopediatra belo horizonte", 44, 3, 1.0], ["odontopediatria", 32, 1, 1.0], ["odontopediatra", 30, 1, 1.0], ["dentista infantil belo horizonte", 18, 2, 2.0], ["dentista infantil", 15, 2, 0.0], ["dentista infantil em venda nova", 13, 0, 0.0], ["dentista infantil perto de mim", 13, 0, 0.0], ["dentista pediatra", 8, 0, 0.0], ["odontopediatria perto de mim", 7, 1, 1.0]]},dias:[["Segunda", 10, 152, 153.35], ["Terça", 14, 174, 195.37], ["Quarta", 3, 187, 27.85], ["Quinta", 5, 158, 79.45], ["Sexta", 8, 113, 121.93], ["Sábado", 1, 46, 14.72]],n:[
 '<b>Volume:</b> julho fechou com 41 conversas no WhatsApp a partir de R$ 1.186,39 investidos, com custo médio de aproximadamente R$ 28,94 por conversa.',
 '<b>Meta Ads:</b> as campanhas do Meta geraram 24 conversas com R$ 593,72 investidos — média de aproximadamente R$ 24,74 por conversa. A campanha “Sala comercial” concentrou 22 dessas conversas e apresentou o melhor custo do canal no mês.',
@@ -150,7 +153,30 @@ const DATA={'2026-07':{l:'Julho 2026',s:'Jul 2026',c:[{"id": "sala", "n": "Sala 
 '<b>Meta Ads:</b> foi o principal responsável pelo crescimento: 111 conversas com R$ 894,32 investidos — média de aproximadamente R$ 8,06 por conversa. As duas campanhas ativas apresentaram custos fortes, com destaque para “Sala comercial”, com 71 conversas a cerca de R$ 6,20 cada.',
 '<b>Google Ads:</b> gerou 13 conversas com R$ 989,65 investidos — aproximadamente R$ 76,13 por conversa. A Cativar manteve presença muito alta, aparecendo em 81,97% das buscas e no topo da página em 91,62% delas, mas o custo por contato aumentou em relação a julho. Isso mostra que o próximo ganho deve vir mais da qualidade das buscas do que de simplesmente aumentar a verba.',
 '<b>Próximos passos:</b> preservar e testar escala gradual nas campanhas do Meta, que hoje entregam o maior volume com melhor eficiência. No Google, revisar termos sem conversão, ampliar negativas e concentrar verba em buscas de intenção clara, como “odontopediatra belo horizonte”, “dentista pediatra” e termos relacionados a atendimento infantil, acompanhando se o custo por contato volta a cair.'
-]}};
+]},'2026-09':{l:'Setembro 2026',s:'Set 2026',
+ c:[{id:'sala',n:'Sala comercial',p:'Meta',c:'--sage',s:2.62,r:1,k:1,i:164},
+    {id:'pc',n:'Primeira consulta (WhatsApp)',p:'Meta',c:'--pink',s:413.34,r:35,k:108,i:17723},
+    {id:'goog',n:'Pesquisa geral',p:'Google',c:'--butter',s:1135.94,r:14,k:94,i:1114}],
+ g:{lig:4,rota:4,out:22},v:RIV9,
+ aud:{sexo:{mulheres:35,homens:1,nd:0},idade:[["18-24",0],["25-34",22],["35-44",13],["45-54",1],["55-64",0],["65+",0]]},
+ busca:{tot:1114,det:120,termos:[
+  ["odontopediatra belo horizonte",29,4,1.0],
+  ["dentista infantil",14,1,0.0],
+  ["dentista infantil perto de mim",8,1,1.0],
+  ["ortodontista infantil",7,2,2.0],
+  ["odontopediatria perto de mim",7,0,0.0],
+  ["clinica cativar",7,1,0.0],
+  ["cativar clinica",6,1,0.0],
+  ["odontopediatria bh",3,1,1.0]
+ ]},
+ dias:[["Segunda",18,227,274.73],["Terça",23,250,273.12],["Quarta",20,241,200.78],["Quinta",14,191,166.01],["Sexta",17,165,197.89],["Sábado",2,40,23.41]],
+ renda:[["10% com maior renda",35,484,424.45],["11–20%",28,213,338.11],["21–30%",9,93,120.35],["31–40%",4,70,67.13],["Desconhecida",18,254,185.90]],
+ n:[
+ '<b>Volume:</b> setembro fechou com <b>50 conversas no WhatsApp</b>, contra 124 em agosto. O investimento total caiu de R$ 1.883,97 para <b>R$ 1.551,90</b>, enquanto o custo médio por conversa passou de aproximadamente R$ 15,19 para <b>R$ 31,04</b>.',
+ '<b>Meta Ads:</b> gerou <b>36 conversas com R$ 415,96 investidos</b> — aproximadamente R$ 11,55 por conversa. A maior parte da queda de volume veio da campanha “Sala comercial”, que passou de 71 conversas em agosto para apenas 1 em setembro e teve somente R$ 2,62 de investimento. Já “Primeira consulta” ficou mais estável: 35 conversas em setembro contra 40 em agosto.',
+ '<b>Google Ads:</b> gerou <b>14 contatos com R$ 1.135,94 investidos</b> — aproximadamente R$ 81,14 por contato. O volume ficou praticamente estável frente a agosto (13 → 14), com presença ainda forte nas buscas: <b>78,17% de parcela de impressões</b> e 92,64% no topo da página.',
+ '<b>Próximos passos:</b> no Meta, revisar a estratégia da campanha “Sala comercial” e preservar os aprendizados da “Primeira consulta”, testando novas variações sem perder eficiência. No Google, continuar priorizando buscas de alta intenção — como “ortodontista infantil”, “dentista infantil perto de mim” e “odontopediatria bh” — e ampliar negativas para reduzir cliques sem conversão. A distribuição por renda deve ser acompanhada por mais meses antes de qualquer restrição de público.'
+ ]}};
 const K=Object.keys(DATA).sort(),$=id=>document.getElementById(id),L='pt-BR';
 let cur=K[K.length-1],cmp=true;
 const br=n=>n.toLocaleString(L,{style:'currency',currency:'BRL'}),nu=n=>Math.round(n).toLocaleString(L);
@@ -201,6 +227,8 @@ function render(){
   $('bt').innerHTML='<tr><th>Busca</th><th>Apareceu</th><th>Cliques</th><th>Contatos</th></tr>'+[...B.termos].sort((a,b)=>b[1]-a[1]).slice(0,8).map(t=>`<tr><td>${t[0]}</td><td>${nu(t[1])}</td><td>${nu(t[2])}</td><td>${t[3]?f1(t[3]):'—'}</td></tr>`).join('')}
  const W=D.dias;$('dia').style.display=W?'':'none';
  if(W){const gd=n=>{const x=G&&P.dias&&P.dias.find(y=>y[0]==n);return x?x[1]:null};const t2=[...W].sort((a,b)=>b[1]-a[1]).slice(0,2).map(x=>x[0]);$('dd').innerHTML=cols(W.map(x=>({n:x[0].slice(0,3)+'<br>R$ '+nu(x[3]),c:t2.includes(x[0])?'var(--butter)':'color-mix(in srgb,var(--butter) 45%,var(--card))',v:x[1],g:gd(x[0])})),nu)}
+ const E=D.renda;$('ren').style.display=E?'':'none';
+ if(E){const tc=E.reduce((s,x)=>s+x[1],0),hi=E.filter(x=>x[0].includes('10%')||x[0].includes('11–20')).reduce((s,x)=>s+x[1],0);$('rh').innerHTML=`As duas faixas superiores de renda concentraram <b>${nu(hi)} dos ${nu(tc)} cliques identificados por renda</b>. A categoria “Desconhecida” respondeu por ${nu(E.find(x=>x[0]=='Desconhecida')[1])} cliques.`;$('rb').innerHTML=bars(E.map(x=>({n:x[0],p:br(x[3])+' investidos',c:'--tan',v:x[1],g:null})),nu)}
  $('notes').innerHTML=`<div class="manager-notes">${D.n.map(t=>`<div class="manager-note">${t}</div>`).join('')}</div>`;
 }
 $('sw').onchange=e=>{cmp=e.target.checked;render()};
